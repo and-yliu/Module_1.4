@@ -2,7 +2,7 @@ public class Triangle extends TwoDShape implements Rotate{
     private double side1;
     private double side2;
     private double side3;
-    private int angle = 0;
+    private double angle = 0;
 
     //Default Constructor
     public Triangle(double width, double height, Colour colour){
@@ -82,9 +82,9 @@ public class Triangle extends TwoDShape implements Rotate{
      */
     @Override
     public void rotate90() {
-        angle += 90;
-        if(angle >= 360){
-            angle -= 360;
+        angle += 90.0;
+        if(angle >= 360.0){
+            angle -= 360.0;
         }
     }
 
@@ -93,9 +93,9 @@ public class Triangle extends TwoDShape implements Rotate{
      */
     @Override
     public void rotate180() {
-        angle += 180;
-        if(angle > 360){
-            angle -= 360;
+        angle += 180.0;
+        if(angle > 360.0){
+            angle -= 360.0;
         }
     }
 
@@ -106,8 +106,8 @@ public class Triangle extends TwoDShape implements Rotate{
     @Override
     public void rotate(double degree) {
         angle += degree;
-        if(angle > 360){
-            angle -= 360;
+        if(angle > 360.0){
+            angle -= 360.0;
         }
     }
 }
